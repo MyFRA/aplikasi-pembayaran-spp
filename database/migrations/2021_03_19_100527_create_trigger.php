@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTrigger extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('log_pembayaran', function (Blueprint $table) {
+            DB::unprepared('
+                CREATE TRIGGER `before_insert_log_pembayaran` BEFORE INSERT ON `log_pembayaran` FOR EACH ROW SET NEW.tgl_bayar = NOW()
+            ');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('log_pembayaran', function (Blueprint $table) {
+            DB::unprepared('DROP TRIGGER `tr_User_Default_Member_Role`');
+        });
+    }
+}

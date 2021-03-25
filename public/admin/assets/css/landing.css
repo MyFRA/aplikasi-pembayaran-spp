@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-image: url('/images/web/purple-flat.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+}
+
+.container .text-hero {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.container .text-hero h2 {
+    font-size: 3rem;
+}
+
+.container .text-hero h1 {
+    font-size: 4rem;
+}
+
+.container .text-hero .button-wrapper {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.container .text-hero .button-wrapper a {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+}
+
+.container .text-hero .button-wrapper a:last-child {
+    margin-left: 1.2rem;
+}
+
+.container .image-hero {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .image-hero img {
+    width: 85%;
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 0 5rem;
+    }
+    
+    .container .text-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .container .text-hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .container .text-hero .button-wrapper {
+        margin-top: 1.7rem;
+    }
+    
+    .container .text-hero .button-wrapper a {
+        padding: .75rem 1.3rem;
+    }
+    
+    .container .text-hero .button-wrapper a:last-child {
+        margin-left: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 3rem;
+    }
+    
+    .container .text-hero h2 {
+        font-size: 1.7rem;
+    }
+    
+    .container .text-hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .container .text-hero p {
+        font-size: 15px;
+    }
+    
+    .container .text-hero .button-wrapper {
+        margin-top: 1.5rem;
+    }
+    
+    .container .text-hero .button-wrapper a {
+        font-size: 15px;
+        padding: .6rem 1.3rem;
+    }
+    
+    .container .text-hero .button-wrapper a:last-child {
+        margin-left: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .container .text-hero {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .container .text-hero h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .container .text-hero h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .container .text-hero p {
+        font-size: 14px;
+        margin-top: .5rem;
+        text-align: center;
+    }
+
+    .container .text-hero .button-wrapper {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container .text-hero .button-wrapper a {
+        font-size: 15px;
+        font-weight: 500;
+        padding: .75rem 1.7rem;
+    }
+    
+    .container .text-hero .button-wrapper a:last-child {
+        margin-left: .8rem;
+    }
+
+    .container .image-hero {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container .image-hero img {
+        width: 76%;
+    }
+}
