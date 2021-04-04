@@ -27,7 +27,9 @@ Route::middleware(['auth.adminsiswa'])->group(function() {
     Route::get('/histori-pembayaran', 'Admin\HistoriPembayaranController@index');
     Route::get('/histori-pembayaran/cetak/index', 'Admin\HistoriPembayaranController@cetakIndex');
     Route::get('/histori-pembayaran/{id_log_pembayaran}', 'Admin\HistoriPembayaranController@show');
+    Route::get('/histori-pembayaran/{id_log_pembayaran}/kuitansi', 'Admin\HistoriPembayaranController@showKuitansi');
     Route::get('/histori-pembayaran/siswa/{nisn}', 'Admin\HistoriPembayaranController@showByNisn');
+    Route::get('/histori-pembayaran/siswa/{id_pembayaran}/pembayaran', 'Admin\HistoriPembayaranController@showByPembayaranId');
     Route::get('/siswa/{id_kelas}/create', 'Admin\SiswaController@create');
     Route::resource('/siswa', 'Admin\SiswaController');
     Route::resource('/tahun-ajaran', 'Admin\TahunAjaranController');

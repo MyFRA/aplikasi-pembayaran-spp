@@ -292,6 +292,7 @@ class SiswaController extends Controller
                     $spp        = Spp::find($spp->id_spp);
 
                    $all_spp_payments[$key]['months'][] = [
+                        'id_pembayaran'         => $pembayaran->exists() ? $pembayaran->get()[0]->id_pembayaran : '',
                         'bulan'                 => $month,
                         'status'                => $pembayaran->exists() ? $pembayaran->get()[0]->status : 'Belum Bayar',
                         'kekurangan'            => $pembayaran->exists() ? $spp->nominal - $pembayaran->get()[0]->total_bayar : 0,

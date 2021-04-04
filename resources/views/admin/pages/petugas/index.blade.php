@@ -56,6 +56,10 @@
                                         @else
                                             <a href="" class="btn btn-sm btn-dark">Akses Tidak Diijinkan</a>
                                         @endif
+
+                                        @if( Auth::guard('petugas')->user()->id_petugas == $petugas->id_petugas )
+                                            <a href="{{ url('/app-admin/petugas/tanda-tangan') }}" class="btn btn-sm btn-light">Tanda Tangan</a>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

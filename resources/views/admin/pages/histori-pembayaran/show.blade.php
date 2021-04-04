@@ -58,6 +58,7 @@
                     </div>
                     </div>
                     <div class="card-footer text-right">
+                        <a href="{{ url('/app-admin/histori-pembayaran/1349570873/kuitansi') }}" class="btn btn-success">Lihat Kuitansi</a>
                     @if(Auth::guard('petugas')->check())
                     <a href="{{ url('/app-admin/histori-pembayaran') }}" class="btn btn-dark">Kembali</a>
                     @elseif(Auth::guard('siswa')->check())

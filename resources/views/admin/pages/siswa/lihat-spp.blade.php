@@ -18,6 +18,7 @@
                     <div class="accordion-header collapsed" role="button" data-toggle="collapse" data-target="#panel-body-{{$index}}" aria-expanded="false">
                         <h4 style="font-size: 1.35rem">{{ $all_spp_payment['spp']->tahun_ajaran }}</h4>
                     </div>
+
                     <div class="accordion-body collapse" id="panel-body-{{$index}}" data-parent="#accordion">
                         <div class="table-responsive">
                             <table class="table table-bordered table-md">
@@ -48,9 +49,10 @@
                                                     @if( Auth::guard('petugas')->check() )
                                                         <a class="btn btn-sm btn-success" href="{{ $month['link_add_pembayaran'] }}">Bayar Sekarang</a>
                                                     @endif
-                                                    @if( $month['status'] != 'Belum Bayar' )
-                                                        <a class="btn btn-sm btn-primary" href="{{ url('/app-admin/histori-pembayaran/siswa/' . $siswa->nisn) }}">Lihat Histori</a>
-                                                    @endif
+                                                @endif
+
+                                                @if( $month['status'] != 'Belum Bayar' )
+                                                    <a class="btn btn-sm btn-primary" href="{{ url('/app-admin/histori-pembayaran/siswa/' . $month['id_pembayaran'] . '/pembayaran') }}">Lihat Histori</a>
                                                 @endif
                                             </td>
                                         </tr>

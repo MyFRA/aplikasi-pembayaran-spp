@@ -14,7 +14,7 @@ class Siswa extends Model implements AuthContracts
     use HasFactory;
     protected $table        = 'siswa';
     protected $primaryKey   = 'nisn';
-    protected $fillable     = ['nisn', 'id_kelas', 'nis', 'nama', 'jenis_kelamin', 'no_telp', 'photo', 'alamat'];
+    protected $fillable     = ['nisn', 'id_kelas', 'nis', 'nama', 'jenis_kelamin', 'no_hp', 'photo', 'alamat'];
 
     public function kelas()
     {

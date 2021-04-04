@@ -41,7 +41,7 @@
                                     <th>NISN</th>
                                     <th>NIS</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>No Telp</th>
+                                    <th>No HP</th>
                                     <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -53,7 +53,7 @@
                                     <td>{{ $siswa->nisn }}</td>
                                     <td>{{ $siswa->nis }}</td>
                                     <td>{{ $siswa->jenis_kelamin }}</td>
-                                    <td>{{ $siswa->no_telp }}</td>
+                                    <td>{{ $siswa->no_hp }}</td>
                                     <td>{{ $siswa->alamat }}</td>
                                     <td>
                                         <a href="{{ url('/app-admin/siswa/' . encrypt($siswa->nisn) . '/lihat-spp') }}" class="btn btn-sm btn-success"><i class="fas fa-edit"></i> Lihat SPP</a>
